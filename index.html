@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Muebleria Morales </title>
+</head>
+<body>
+    
+    <div>
+        <h1>Muebleria Morales</h1>
+    </div>
+
+    <div>
+        <ul>
+            <li>
+                 <button onclick="ver('https://20430054.prowebii24.com/lineaBlanca/lineaBlanca.html')"> Linea Blanca </button>  
+                </li>
+            <li><button onclick="ver('https://20430054.prowebii24.com/mueblesInteriores/mueblesInteriores.html')"> Muebles interiores </button> </li>
+            <li><button onclick="ver('https://20430054.prowebii24.com/mueblesExteriores/mueblesExteriores.html')"> Muebles Exteriores </button> </li>
+
+        </ul>
+    </div>
+
+    <div id="cont1">
+        <p>
+            Es la pagina de inicio de Muebleria
+        </p>
+    </div>
+   <div>
+    <a href="https://www.bodegaaurrera.com.mx">bodegaaurrera</a>
+    <a href="https://www.coppel.com">Coopel</a>
+    <a href="https://sanchezgarza.com/services/">Sanchez Garza</a>
+   </div>
+</body>
+
+<script>
+   function ver(url) {
+            div1 = document.querySelector("#cont1");
+            fetch(url)
+                .then(response => response .text())
+                .then(data => {div1.innerHTML = data});
+        }
+
+
+</script>
+</html>
